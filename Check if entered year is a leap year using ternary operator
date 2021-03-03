@@ -1,0 +1,30 @@
+
+/*
+ Copyright   : Techyrick.com
+ Description : Check if entered year is a leap year using ternary operator
+ ============================================================================
+ */
+
+#include<stdio.h> 
+int main(void) {
+
+	int year, leap_flag;
+
+	printf(
+			"C Program to check entered year is a leap year or not using ternary operator :");
+	printf("\nEnter Year : ");
+	scanf("%d", &year);
+
+	leap_flag = (year % 400 == 0) ? :
+				(year % 100 != 0) ? (year % 4 == 0) ? 1 : 0 : 0;
+
+	if (leap_flag == 1) {
+
+		printf("\n %d is a leap year!", year);
+	} else {
+		printf("\n %d is not a leap year!", year);
+	}
+
+	return 0;
+}
+
